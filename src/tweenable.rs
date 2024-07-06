@@ -1344,7 +1344,7 @@ mod tests {
     use bevy::ecs::{
         component::Tick,
         event::Events,
-        system::{CommandQueue, SystemState},
+        system::SystemState, world::CommandQueue,
     };
 
     use super::*;

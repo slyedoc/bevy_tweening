@@ -5,10 +5,11 @@ use bevy::{ecs::component::Tick, prelude::*};
 use bevy_tweening::{lens::*, ComponentTarget};
 use criterion::{black_box, Criterion};
 
+
 fn text_color_lens(c: &mut Criterion) {
     let mut lens = TextColorLens {
-        start: Color::RED,
-        end: Color::BLUE,
+        start: Color::srgb(1.0, 0.0, 0.0),
+        end: Color::srgb(0.0, 0.0, 1.0),
         section: 0,
     };
     let mut text = Text::from_section(
